@@ -1,0 +1,5 @@
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" class="button__icon" width="20" height="12" viewBox="0 0 20 12"><defs><g id="ok">
+          <path  d="M19.037 0.977859L8.01619 11.9987L7.67308 11.6556L7.3299 11.9987L0.309082 4.97792L1.01619 4.27081L7.67301 10.9276L18.3299 0.270752L19.037 0.977859Z" ></path>
+        </g></defs>
+                <use xlink:href="#ok"></use>
+              </svg>

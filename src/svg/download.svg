@@ -1,0 +1,5 @@
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" id="downloadButtonIcon" class="button__icon button__icon_nomr" width="13" height="17" viewBox="0 0 13 17"><defs><g id="download">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M5.70898 12.3972V0.735107H6.70898V12.3972L9.83153 8.80302L10.5864 9.45886L6.20898 14.4975L1.83153 9.45886L2.58643 8.80302L5.70898 12.3972ZM12.209 15.7351V16.7351H0.208984V15.7351H12.209Z"></path>
+        </g></defs>
+                        <use xlink:href="#download"></use>
+                      </svg>

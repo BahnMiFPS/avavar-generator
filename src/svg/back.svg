@@ -1,0 +1,5 @@
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" class="button__icon" width="25" height="16" viewBox="0 0 25 16"><defs><g id="left">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M2.60305 7.88597L10.0272 14L9.39152 14.7719L0.422852 7.38597L9.39152 0L10.0272 0.77193L2.60305 6.88597H24.2094V7.88597H2.60305Z"></path>
+        </g></defs>
+                      <use xlink:href="#left"></use>
+                    </svg>
