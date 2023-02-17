@@ -48,7 +48,6 @@ function App() {
 	}
 	const [selectedArea, setSelectedArea] = useState("")
 	const [areaItemRendering, setAreaItemRendering] = useState([])
-	const [test, setTest] = useState([])
 
 	const [renderPart, setRenderPart] = useState(null)
 
@@ -249,13 +248,17 @@ function App() {
 			toRender.push(finalQuery)
 		}
 	}
+	const [btnState, setBtnState] = useState(false)
 
 	const handleRenderItemClick = (title) => {
 		console.log(title)
 		looping(title)
 		setSelectedSmallArea(title)
 		setRenderPart(toRender)
+		setBtnState((btnState) => !btnState)
 	}
+
+	let toggleClassCheck = btnState ? "active" : ""
 
 	const items = [
 		{ id: 1, title: "face", image: face },
@@ -384,9 +387,9 @@ function App() {
 							</button>
 							{areaItemRendering.map((smallArea) => {
 								return (
-									<div className="btn-options">
+									<div className="btn-options  ">
 										<button
-											className="cat-button item-button"
+											className={`cat-button item-button  `}
 											onClick={() => handleRenderItemClick(smallArea.title)}
 										>
 											<img src={smallArea.image} ClassName="cat-button__icon" />
