@@ -3,11 +3,7 @@ import React, { useState, useEffect } from "react"
 import "./App.css"
 // src url. images/body/1.png
 
-import tick from "./svg/tick.svg"
 import back from "./svg/back.svg"
-import redo from "./svg/redo.svg"
-import undo from "./svg/undo.svg"
-import logo from "./svg/logo.svg"
 import face from "./svg/face.svg"
 import eye from "./svg/eye.svg"
 import hair from "./svg/hair.svg"
@@ -29,6 +25,8 @@ import glasses from "./svg/glasses.svg"
 import layer_1 from "./svg/layer_1.svg"
 import layer_2 from "./svg/layer_2.svg"
 import layer_3 from "./svg/layer_3.svg"
+import Header from "./Header"
+import Avatar from "./Avatar"
 
 // import random from "./svg/random.svg"
 
@@ -333,26 +331,9 @@ function App() {
 
 	return (
 		<div className="App">
-			<div className="header">
-				<div className="btn-groups">
-					<button className="btn undo">
-						<img src={undo} />
-					</button>
-
-					<button className="btn redo">
-						<img src={redo} />
-					</button>
-				</div>
-				<a href="" className="logo">
-					<img src={logo} />
-				</a>
-
-				<button className="finish">
-					<img src={tick} className="tick" />
-				</button>
-			</div>
+			<Header />
 			<div className="main">
-				<div className="showcase-wrapper">
+				{/* <div className="showcase-wrapper">
 					<div className="showcase">
 						<img src={bodyUrl} alt="" style={{ zIndex: "0" }} />
 
@@ -377,7 +358,21 @@ function App() {
 						<img src={layer_2_Url} alt="" style={{ zIndex: "5" }} />
 						<img src={layer_3_Url} alt="" style={{ zIndex: "6" }} />
 					</div>
-				</div>
+				</div> */}
+				<Avatar
+					bodyUrl={bodyUrl}
+					neckwearUrl={neckwearUrl}
+					earUrl={earUrl}
+					eyeBrowsUrl={eyeBrowsUrl}
+					eyesUrl={eyesUrl}
+					glassesUrl={glassesUrl}
+					hairUrl={hairUrl}
+					beardUrl={beardUrl}
+					hatUrl={hatUrl}
+					layer_1_Url={layer_1_Url}
+					layer_2_Url={layer_2_Url}
+					layer_3={layer_3_Url}
+				/>
 				{selectedArea ? (
 					<div className="content-container">
 						<div className="content-top">
