@@ -119,9 +119,6 @@ function App() {
 		)
 	}
 
-	useEffect(() => {
-		init()
-	}, [])
 	const handleResetButton = (e) => {
 		e.preventDefault()
 		setBodyUrl(`/images/character/body/1.png`)
@@ -249,6 +246,7 @@ function App() {
 		}
 	}
 	const [btnState, setBtnState] = useState(false)
+	const [isActive, setIsActive] = useState(null)
 
 	const handleRenderItemClick = (title) => {
 		console.log(title)
@@ -256,6 +254,7 @@ function App() {
 		setSelectedSmallArea(title)
 		setRenderPart(toRender)
 		setBtnState((btnState) => !btnState)
+		setIsActive(title)
 	}
 
 	let toggleClassCheck = btnState ? "active" : ""
@@ -336,32 +335,6 @@ function App() {
 		<div className="App">
 			<Header />
 			<div className="main">
-				{/* <div className="showcase-wrapper">
-					<div className="showcase">
-						<img src={bodyUrl} alt="" style={{ zIndex: "0" }} />
-
-						<img src={neckwearUrl} alt="" style={{ zIndex: "5" }} />
-						<img src={mouthsUrl} alt="" style={{ zIndex: "6" }} />
-
-						<img src={earUrl} alt="" style={{ zIndex: "7" }} />
-
-						<img src={eyeBrowsUrl} alt="" style={{ zIndex: "4" }} />
-
-						<img src={eyesUrl} alt="" style={{ zIndex: "3" }} />
-
-						<img src={glassesUrl} alt="" style={{ zIndex: "5" }} />
-
-						<img src={hairUrl} alt="" style={{ zIndex: "7" }} />
-
-						<img src={beardUrl} alt="" style={{ zIndex: "7" }} />
-
-						<img src={hatUrl} alt="" style={{ zIndex: "8" }} />
-
-						<img src={layer_1_Url} alt="" style={{ zIndex: "4" }} />
-						<img src={layer_2_Url} alt="" style={{ zIndex: "5" }} />
-						<img src={layer_3_Url} alt="" style={{ zIndex: "6" }} />
-					</div>
-				</div> */}
 				<Avatar
 					bodyUrl={bodyUrl}
 					neckwearUrl={neckwearUrl}
@@ -385,11 +358,16 @@ function App() {
 							>
 								<img src={back} />
 							</button>
-							{areaItemRendering.map((smallArea) => {
+
+							{areaItemRendering.map((smallArea, index) => {
 								return (
-									<div className="btn-options  ">
+									<div className={`btn-options`} key={index}>
 										<button
-											className={`cat-button item-button  `}
+											className={`cat-button item-button  ${
+												smallArea.title === selectedSmallArea
+													? "active-area"
+													: ""
+											}`}
 											onClick={() => handleRenderItemClick(smallArea.title)}
 										>
 											<img src={smallArea.image} ClassName="cat-button__icon" />
