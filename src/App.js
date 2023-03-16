@@ -118,6 +118,9 @@ function App() {
 			`/images/character/clothes/layer_3/${mathRandom("layer_3")}.png`
 		)
 	}
+	useEffect(() => {
+		init()
+	}, [])
 
 	const handleResetButton = (e) => {
 		e.preventDefault()
